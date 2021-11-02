@@ -1,7 +1,9 @@
 import React from 'react'
+import { Route } from 'react-router-dom'
 
 import Nav from './Nav'
 import Home from './Home'
+import Continent from './Continent'
 
 function App () {
   return (
@@ -12,8 +14,9 @@ function App () {
       </div>
       {/* This 'main' div is only for styling (so we can use flexbox) */}
       <div className='main'>
-        <Nav />
-        <Home />
+        <Route path='/' component={Nav} />
+        <Route path='/' exact component={Home} />
+        <Route path='/continents/:name' component={Continent} />
       </div>
     </>
   )
