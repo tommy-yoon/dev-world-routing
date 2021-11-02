@@ -2,6 +2,8 @@
 
 This exercise has you building an experience to navigate continents and their countries. We'll use [React Router](https://github.com/ReactTraining/react-router) to create the links and pages and manage browser history.
 
+![Mr Worldwide](https://i.kym-cdn.com/entries/icons/facebook/000/023/098/1038860.jpg)
+
 
 ## Setup
 
