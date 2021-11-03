@@ -16,7 +16,7 @@ function Nav () {
         {
           Object.keys(continents).map(continent => {
             return <li key={continent} className={continent === name ? 'selected' : ''}>
-              <Link to={`/continents/${continent}`}>{continent}</Link>
+              <Link to={`/continents/${continent}`}><p className={continent === name ? 'selected' : ''}>{continent}</p></Link>
             </li>
           })}
       </ul>
