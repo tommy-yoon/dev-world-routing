@@ -3,12 +3,27 @@ import React from 'react'
 import ReactCountryFlag from 'react-country-flag'
 
 import { useParams } from 'react-router'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 
 import countries from '../../data/countries'
+import continents from '../../data/continents'
 
 function Country () {
   const { name, code } = useParams()
+  const history = useHistory()
+
+  const myContinent = continents[name]
+
+  // check the myContinent has this country in it
+  if (!myContinent.countries.find((country) => country.code === code)) {
+    // if not find the real my continent
+    const arr = Object.keys(continents)
+    const index = arr.indexOf(name)
+    arr.splice(index, 1)
+    arr.forEach(continent => {
+      if (continents[continent].countries.find((country) => country.code === code)) { history.push(`/continent/${continent}/${code}`) }
+    })
+  }
 
   const country = countries.find(ele => ele.code === code)
   return (
