@@ -1,5 +1,7 @@
 import React from 'react'
 
+import ReactCountryFlag from 'react-country-flag'
+
 import { useParams } from 'react-router'
 import { Link } from 'react-router-dom'
 
@@ -12,10 +14,9 @@ function Country () {
   console.log('Country', 'code', code)
 
   const country = countries.find(ele => ele.code === code)
-
   return (
     <div className="country">
-      <h1>{country.flag} {country.name}</h1>
+      <h1><ReactCountryFlag countryCode={code} svg/>{country.name}</h1>
       <div className='description'>
         <p className='bold'>Capital:</p>&nbsp;<p>{country.capital}</p>
       </div>
