@@ -4,6 +4,7 @@ import { Route } from 'react-router-dom'
 import Nav from './Nav'
 import Home from './Home'
 import Continent from './Continent'
+import Country from './Country'
 
 function App () {
   return (
@@ -17,7 +18,7 @@ function App () {
         <Route path='/' component={Nav} />
         <Route path='/' exact component={Home} />
         <Route path='/continents/:continent' exact component={Continent} />
-        {/* <Route path='/continents/country/:country' exact component={Country} /> */}
+        <Route path='/continents/:continent/:countryCode' exact component={Country} />
       </div>
     </>
   )

@@ -20,7 +20,7 @@ function NavContinent (props) {
         <ul>
           {
             countries.map(country => (
-              <li key={country.name}>{country.name}</li>
+              <li key={country.name}><Link to={`/continents/${continent}/${country.code}`}>{country.name}</Link></li>
             ))
           }
         </ul>
