@@ -7,18 +7,13 @@ import continents from '../../data/continents'
 
 function Continent () {
   const { name } = useParams()
-  console.log(name)
 
   const continent = continents[name]
 
   const sortiedCountries = continent.countries.sort((a, b) => {
-    // const result = a.name[0] - b.name[0]
     const result = a.name[0].toUpperCase().charCodeAt(0) - b.name[0].toUpperCase().charCodeAt(0)
-    // console.log('compare', a.name[0], b.name[0], 'result', result)
     return result
   })
-
-  // console.log(sortiedCountries)
 
   return (
     <div className="continent">

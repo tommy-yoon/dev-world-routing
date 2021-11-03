@@ -7,7 +7,6 @@ import continents from '../../data/continents'
 
 function Nav () {
   const { name } = useParams()
-  console.log('In Nav', 'name', name)
   return (
     <div>
       <h2>Nav</h2>
