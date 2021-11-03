@@ -26,3 +26,26 @@ a {
 img {
   max-height: 200px;
 }
+
+.continent {
+  display: flex;
+  flex-direction: column;
+}
+
+.country {
+  display: flex;
+  flex-direction: column;
+}
+
+.description {
+  display: flex;
+  flex-direction: row;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.selected {
+  color: red
+}
