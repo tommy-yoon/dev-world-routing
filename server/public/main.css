@@ -47,7 +47,8 @@ img {
 }
 
 .selected {
-  color: red
+  color: red;
+  font-weight:bold;
 }
 
 .flag {

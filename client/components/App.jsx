@@ -15,7 +15,9 @@ function App () {
       </div>
       {/* This 'main' div is only for styling (so we can use flexbox) */}
       <div className='main'>
-        <Route path='/' component={Nav} />
+        <Route path='/' exact component={Nav} />
+        <Route path='/continents/:name' exact component={Nav} />
+        <Route path='/continent/:name/:code' exact component={Nav} />
         <Route path='/' exact component={Home} />
         <Route path='/continents/:name' component={Continent} />
         <Route path='/continent/:name/:code' component={Country} />
