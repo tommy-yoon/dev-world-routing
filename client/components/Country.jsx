@@ -8,10 +8,7 @@ import { Link } from 'react-router-dom'
 import countries from '../../data/countries'
 
 function Country () {
-  const { name } = useParams()
-  console.log('Country', 'name', name)
-  const { code } = useParams()
-  console.log('Country', 'code', code)
+  const { name, code } = useParams()
 
   const country = countries.find(ele => ele.code === code)
   return (
