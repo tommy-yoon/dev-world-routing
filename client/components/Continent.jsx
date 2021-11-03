@@ -11,13 +11,17 @@ function Continent () {
 
   const continent = continents[name]
 
+  const sortiedCountries = continent.countries.sort((a, b) => {
+    return a.name[0] - b.name[0]
+  })
+
   return (
     <div className="continent">
       <h1>{name}</h1>
       <img src={'/images/' + continent.image} alt={name}></img>
       <ul>
         {
-          continent.countries.map((country) => {
+          sortiedCountries.map((country) => {
             return <li key={country.code}>
               <Link to={`/continent/${name}/${country.code}`}>{country.name}</Link>
             </li>
