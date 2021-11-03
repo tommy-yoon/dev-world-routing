@@ -49,3 +49,7 @@ img {
 .selected {
   color: red
 }
+
+.flag {
+  font-weight:20px
+}
