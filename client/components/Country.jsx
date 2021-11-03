@@ -3,10 +3,19 @@ import { useParams, Link } from 'react-router-dom'
 import countries from '../../data/countries'
 
 function Country (props) {
-  const { countryCode } = useParams()
+  const { continent, countryCode } = useParams()
 
   // Find the match from the country list
   const country = countries.find(country => country.code === countryCode)
+
+  const neighborCountryCodes = country.neighbours.split(',')
+
+  // If a country on the list belongs to the neighbour countries, include it;
+  const neighborCountries = countries.filter(country => {
+    return neighborCountryCodes.indexOf(country.code) !== -1
+  })
+
+  console.log(neighborCountries)
 
   // Example object:
   //   {
@@ -42,8 +51,12 @@ function Country (props) {
           <td>{country.currencyName}</td>
         </tr>
         <tr>
-          <th>Neighbors</th>
-          <td>{country.neighbours}</td>
+          <th className="neighbor-th">Neighbors</th>
+          {
+            neighborCountries.map(country => (
+              <tr key={country.name}><Link to={`/continents/${continent}/${country.code}`}>{country.name}</Link></tr>
+            ))
+          }
         </tr>
       </table>
     </div>
