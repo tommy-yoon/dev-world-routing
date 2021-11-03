@@ -52,5 +52,44 @@ img {
 }
 
 .flag {
-  font-weight:20px
+  font-weight:20px;
 }
+
+.nav {
+  display: flex;
+  flex-direction: column;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  height: 40px;
+} 
+
+li .not-selected::before {
+  content: "\2606"; /* Unicode bullet symbol */
+  color: black;  /* Bullet color */
+
+/* Optional tweaks */
+  font-weight: bold;
+  padding-right: 5px;
+}
+
+li .selected::before  {
+  content: "\2605"; /* Unicode bullet symbol */
+  color: black;  /* Bullet color */
+
+/* Optional tweaks */
+  font-weight: bold;
+  padding-right: 5px;
+}
+
+/* li:focus, li:active{
+  content: "\2605"; 
+  background-color: pink;
+  color: white; 
+} */
