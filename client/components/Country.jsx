@@ -31,6 +31,8 @@ function Country () {
       </div>
       <div className='description'>
         <p className='bold'>Neighbours:</p>
+      </div>
+      <div className='description'>
         <ul>
           {country.neighbours !== '' && country.neighbours.split(',').map((code) => {
             const country = countries.find(ele => ele.code === code)
