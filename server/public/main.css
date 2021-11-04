@@ -26,10 +26,3 @@ a {
 img {
   max-height: 200px;
 }
-
-countryClass{ 
-    flex-direction: column;
-}
-th {
-    text-align: left;
-}
