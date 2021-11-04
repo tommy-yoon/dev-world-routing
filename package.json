@@ -5,10 +5,11 @@
   "repository": "https://github.com/dev-academy-challenges/worldwide-routing.git",
   "main": "server/index.js",
   "scripts": {
+    "start": "npm run server",
     "dev": "run-p client server",
     "webpack": "webpack --config client/webpack.config.js",
     "client": "npm run webpack -- --watch",
-    "start": "node server",
+    "server": "node server",
     "test": "jest --watch --noStackTrace",
     "lint": "eslint --ext .js,.jsx .",
     "build": "webpack --config client/webpack.config.js --mode development"
