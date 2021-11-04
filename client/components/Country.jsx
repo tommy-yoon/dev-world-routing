@@ -48,7 +48,7 @@ function Country () {
         <ul>
           {country.neighbours !== '' && country.neighbours.split(',').map((code) => {
             const country = countries.find(ele => ele.code === code)
-            return <li key={code}>
+            return <li key={code} className='country-list'>
               <Link to={`/continent/${name}/${code}`}>{country.name}</Link>
             </li>
           })}

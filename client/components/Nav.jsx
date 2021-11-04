@@ -10,7 +10,13 @@ function Nav () {
   return (
     <div className='nav'>
       <h2></h2>
-      <Link className='home' to='/'><i className='fas fa-home'> Home</i></Link>
+      <Link className='home' to='/'>
+        <span className='fa-stack fa-lg'>
+          <i className='fas fa-circle fa-stack-2x'></i>
+          <i className='fas fa-home fa-stack-1x fa-inverse'></i>
+        </span>
+        Home
+      </Link>
       <ul>
         {
           Object.keys(continents).map(continent => {
