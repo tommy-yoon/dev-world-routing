@@ -19,10 +19,10 @@ function Continent () {
     <div className="continent">
       <h1>{name}</h1>
       <img src={'/images/' + continent.image} alt={name}></img>
-      <ul>
+      <ul className='countries'>
         {
           sortiedCountries.map((country) => {
-            return <li key={country.code}>
+            return <li key={country.code} className='country'>
               <Link to={`/continent/${name}/${country.code}`}>{country.name}</Link>
             </li>
           })
