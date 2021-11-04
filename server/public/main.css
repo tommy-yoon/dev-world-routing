@@ -47,7 +47,7 @@ img {
 }
 
 .selected {
-  color: red;
+  /* color: rgb(19, 18, 18); */
   font-weight:bold;
 }
 
@@ -71,17 +71,25 @@ li {
 } 
 
 li .not-selected::before {
-  content: "\2606"; /* Unicode bullet symbol */
-  color: black;  /* Bullet color */
-
-/* Optional tweaks */
+  font-family: 'Font Awesome 5 Free';
+  content: "\f0ac";
+  /* Unicode bullet symbol */
+  /* content: "\2606";  */
+  /* Bullet color */
+  color: black;  
+  
+  /* Optional tweaks */
   font-weight: bold;
   padding-right: 5px;
 }
 
 li .selected::before  {
-  content: "\2605"; /* Unicode bullet symbol */
-  color: black;  /* Bullet color */
+  font-family: 'Font Awesome 5 Free';
+  content: "\f005";
+  /* Unicode bullet symbol */
+  /* content: "\2605";  */
+  /* Bullet color */
+  color: black;  
 
 /* Optional tweaks */
   font-weight: bold;
