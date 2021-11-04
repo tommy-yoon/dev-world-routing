@@ -1,5 +1,5 @@
 body {
-  background-color:aliceblue;
+  background-color: aliceblue;
   color: #0a1520;
   font-family: 'Poppins', sans-serif;
 }
@@ -7,6 +7,8 @@ body {
 .main, .title {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .title img {
@@ -30,10 +32,9 @@ img {
 }
 
 /* .continent {
-  display: flex;
-  flex-direction: column;
+display: flex;
+flex-direction: column;
 } */
-
 .description {
   display: flex;
   flex-direction: row;
@@ -45,11 +46,11 @@ img {
 
 .selected {
   /* color: rgb(19, 18, 18); */
-  font-weight:bold;
+  font-weight: bold;
 }
 
 .flag {
-  font-weight:20px;
+  font-weight: 20px;
 }
 
 .nav {
@@ -65,13 +66,12 @@ li .continent {
   display: flex;
   align-items: center;
   height: 30px;
-} 
+}
 
 /* li .country {
-  display: flex;
-  flex-direction: column;
+display: flex;
+flex-direction: column;
 } */
-
 .countries {
   display: flex;
   align-items: flex-start;
@@ -85,41 +85,37 @@ li .not-selected::before {
   /* Unicode bullet symbol */
   /* content: "\2606";  */
   /* Bullet color */
-  color: black;  
-  
+  color: black;
   /* Optional tweaks */
   font-weight: bold;
   padding-right: 5px;
 }
 
-li .selected::before  {
+li .selected::before {
   font-family: 'Font Awesome 5 Free';
   content: "\f005";
   /* Unicode bullet symbol */
   /* content: "\2605";  */
   /* Bullet color */
-  color: black;  
-
-/* Optional tweaks */
+  color: black;
+  /* Optional tweaks */
   font-weight: bold;
   padding-right: 5px;
 }
 
 /* li:focus, li:active{
-  content: "\2605"; 
-  background-color: pink;
-  color: white; 
+content: "\2605"; 
+background-color: pink;
+color: white; 
 } */
-
 .country-list::before {
   font-family: 'Font Awesome 5 Free';
   content: "\f024";
   /* Unicode bullet symbol */
   /* content: "\2605";  */
   /* Bullet color */
-  color: black;  
-
-/* Optional tweaks */
+  color: black;
+  /* Optional tweaks */
   font-weight: bold;
   padding-right: 5px;
 }
