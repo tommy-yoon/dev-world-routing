@@ -1,5 +1,5 @@
 body {
-  background-color: #faf8f1;
+  background-color:aliceblue;
   color: #0a1520;
   font-family: 'Poppins', sans-serif;
 }
@@ -21,6 +21,8 @@ body {
 
 a {
   text-decoration-line: none;
+  text-decoration: none;
+  color: black;
 }
 
 img {
@@ -70,10 +72,11 @@ li .continent {
   flex-direction: column;
 } */
 
-ul .countries {
+.countries {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   /* height: 40px; */
+  flex-direction: column;
 }
 
 li .not-selected::before {
@@ -108,7 +111,7 @@ li .selected::before  {
   color: white; 
 } */
 
-li .country::before {
+.country-list::before {
   font-family: 'Font Awesome 5 Free';
   content: "\f024";
   /* Unicode bullet symbol */

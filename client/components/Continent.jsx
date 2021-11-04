@@ -22,7 +22,7 @@ function Continent () {
       <ul className='countries'>
         {
           sortiedCountries.map((country) => {
-            return <li key={country.code} className='country'>
+            return <li key={country.code} className='country-list'>
               <Link to={`/continent/${name}/${country.code}`}>{country.name}</Link>
             </li>
           })
