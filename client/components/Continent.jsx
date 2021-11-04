@@ -16,7 +16,7 @@ function Continent () {
   })
 
   return (
-    <div className="continent">
+    <div className="continent-main">
       <h1>{name}</h1>
       <img src={'/images/' + continent.image} alt={name}></img>
       <ul className='countries'>
