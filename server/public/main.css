@@ -27,15 +27,10 @@ img {
   max-height: 200px;
 }
 
-.continent {
+/* .continent {
   display: flex;
   flex-direction: column;
-}
-
-.country {
-  display: flex;
-  flex-direction: column;
-}
+} */
 
 .description {
   display: flex;
@@ -64,11 +59,22 @@ ul {
   list-style: none;
 }
 
-li {
+li .continent {
   display: flex;
   align-items: center;
-  height: 40px;
+  height: 30px;
 } 
+
+/* li .country {
+  display: flex;
+  flex-direction: column;
+} */
+
+ul .countries {
+  display: flex;
+  align-items: center;
+  /* height: 40px; */
+}
 
 li .not-selected::before {
   font-family: 'Font Awesome 5 Free';
@@ -101,3 +107,20 @@ li .selected::before  {
   background-color: pink;
   color: white; 
 } */
+
+li .country::before {
+  font-family: 'Font Awesome 5 Free';
+  content: "\f024";
+  /* Unicode bullet symbol */
+  /* content: "\2605";  */
+  /* Bullet color */
+  color: black;  
+
+/* Optional tweaks */
+  font-weight: bold;
+  padding-right: 5px;
+}
+
+.home {
+  font-family: 'Font Awesome 5 Free';
+}
